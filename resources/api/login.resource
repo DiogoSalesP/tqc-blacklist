@@ -23,6 +23,7 @@ Realizar Login com sucesso
     ${bodyResponse}    Realizar Login    ${USER_MAIL}    ${USER_PASSWORD}    ${STATUS_CODE_OK}
     Status Should Be    ${STATUS_CODE_OK}    ${bodyResponse}
     Should Be Equal    ${bodyResponse.json()['msg']}    Olá ${bodyResponse.json()['user']['fullName']}, autenticação autorizada com sucesso!
+    RETURN    ${bodyResponse.json()['token']}
 
 Realizar Login com Email Válido e Senha Inválida
     ${bodyResponse}    Realizar Login    ${USER_MAIL}    ${USER_PASSWORD}132    ${STATUS_CODE_BAD_REQUEST}
