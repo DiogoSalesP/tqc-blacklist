@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../../../resources/api/user.resource
+Resource    ../../../resources/api/user/user.resource
 
 
 *** Test Cases ***

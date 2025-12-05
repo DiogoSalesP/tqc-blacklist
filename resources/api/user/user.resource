@@ -1,7 +1,10 @@
 *** Settings ***
-Resource    login.resource
-Resource    base_api.resource
-Resource    generate_random_data.resource
+Resource    ../login.resource
+Resource    ../base_api.resource
+Resource    ../generate_random_data.resource
+
+
+
 *** Keywords ***
 Gerar Usuario
     ${FIRST_NAME}    Gerar primeiro nome nao composto
@@ -98,3 +101,4 @@ Deletar usuário com sucesso
     Log    ${bodyResponse}
     Status Should Be    ${STATUS_CODE_OK}    ${bodyResponse}
     Should Be Equal    ${bodyResponse.json()['msg']}    ${MSG_DELETE_SUCCESSFULLY}
+
