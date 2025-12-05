@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.3 on linux)" generated="2025-12-05T09:25:17.054209" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/home/diogo/Documentos/tqc-blacklist/tests/api/login/login.robot">
+<test id="s1-t1" name="Cenário 01: Realizar Login com Sucesso" line="7">
+<kw name="Realizar Login com sucesso" owner="login">
+<kw name="Realizar Login" owner="login">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-12-05T09:25:17.127359" level="INFO">${body} = {'mail': 'blacklist_robot@qa.com', 'password': 'p4Hg83@%sqRw'}</msg>
+<var>${body}</var>
+<arg>mail=${mail}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-12-05T09:25:17.127014" elapsed="0.000382"/>
+</kw>
+<kw name="Criar Sessao" owner="login">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-12-05T09:25:17.127993" level="INFO">${headers} = {'accpet': 'application/json', 'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>accpet=${APPLICATION}</arg>
+<arg>Content-Type=${APPLICATION}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-12-05T09:25:17.127744" elapsed="0.000277"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-12-05T09:25:17.128365" level="INFO">Creating Session using : alias=develop, url=https://api-blacklist.qacoders.dev.br/api, headers={'accpet': 'application/json', 'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>alias=${SESSION_ALIAS}</arg>
+<arg>url=${BASE_URL}</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-12-05T09:25:17.128122" elapsed="0.000512"/>
+</kw>
+<status status="PASS" start="2025-12-05T09:25:17.127541" elapsed="0.001162"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-12-05T09:25:18.079293" level="INFO">POST Request : url=https://api-blacklist.qacoders.dev.br/api/login 
+ path_url=/api/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'accpet': 'application/json', 'Content-Type': 'application/json', 'Content-Length': '62'} 
+ body=b'{"mail": "blacklist_robot@qa.com", "password": "p4Hg83@%sqRw"}' 
+ </msg>
+<msg time="2025-12-05T09:25:18.079891" level="INFO">POST Response : url=https://api-blacklist.qacoders.dev.br/api/login 
+ status=200, reason=OK 
+ headers={'Access-Control-Allow-Origin': '*', 'Content-Length': '907', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Fri, 05 Dec 2025 12:24:55 GMT', 'Etag': 'W/"38b-r8u/XZnzUMg2oDsR7VqrpaZUMlM"', 'X-Powered-By': 'Express'} 
+ body={"msg":"Olá Blacklist QA Automatizado, autenticação autorizada com sucesso!","user":{"_id":"6932c3e73047637d841c1447","fullName":"Blacklist QA Automatizado","mail":"blacklist_robot@qa.com","password":"$2b$10$GOCgNkf18zKBVjZQP6JZq.fUASqMQ78jU89vrAEJggpp5HW0nB.92","accessProfile":"ADMIN","cpf":"30494164369","status":true,"audit":[{"registeredBy":{"userId":"69207aa3239550a884904b24","userLogin":"diogo@sales.com"},"registrationDate":"sexta-feira, 05/12/2025, 08:37:11 BRT","registrationNumber":"QaCoders-24","_id":"6932c3e73047637d841c1448"}],"__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTMyYzNlNzMwNDc2MzdkODQxYzE0NDciLCJ1c2VySWQiOiI2OTMyYzNlNzMwNDc2MzdkODQxYzE0NDciLCJuYW1lIjoiQmxhY2tsaXN0IFFBIEF1dG9tYXRpemFkbyIsIm1haWwiOiJibGFja2xpc3Rfcm9ib3RAcWEuY29tIiwiYWNjZXNzUHJvZmlsZSI6IkFETUlOIiwiaWF0IjoxNzY0OTM3NDk1LCJleHAiOjE3NjUwMjM4OTV9.XXXymKXUsSYG3UGL1fiyYJQ-QOy1FOz4Q-HSLyDmRxs"} 
+ </msg>
+<msg time="2025-12-05T09:25:18.080655" level="INFO">${bodyResponse} = &lt;Response [200]&gt;</msg>
+<var>${bodyResponse}</var>
+<arg>alias=${SESSION_ALIAS}</arg>
+<arg>url=/login</arg>
+<arg>json=${body}</arg>
+<arg>verify=${True}</arg>
+<arg>expected_status=${status_code}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-12-05T09:25:17.128793" elapsed="0.952042"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-05T09:25:18.084325" level="INFO">{'msg': 'Olá Blacklist QA Automatizado, autenticação autorizada com sucesso!', 'user': {'_id': '6932c3e73047637d841c1447', 'fullName': 'Blacklist QA Automatizado', 'mail': 'blacklist_robot@qa.com', 'password': '$2b$10$GOCgNkf18zKBVjZQP6JZq.fUASqMQ78jU89vrAEJggpp5HW0nB.92', 'accessProfile': 'ADMIN', 'cpf': '30494164369', 'status': True, 'audit': [{'registeredBy': {'userId': '69207aa3239550a884904b24', 'userLogin': 'diogo@sales.com'}, 'registrationDate': 'sexta-feira, 05/12/2025, 08:37:11 BRT', 'registrationNumber': 'QaCoders-24', '_id': '6932c3e73047637d841c1448'}], '__v': 0}, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTMyYzNlNzMwNDc2MzdkODQxYzE0NDciLCJ1c2VySWQiOiI2OTMyYzNlNzMwNDc2MzdkODQxYzE0NDciLCJuYW1lIjoiQmxhY2tsaXN0IFFBIEF1dG9tYXRpemFkbyIsIm1haWwiOiJibGFja2xpc3Rfcm9ib3RAcWEuY29tIiwiYWNjZXNzUHJvZmlsZSI6IkFETUlOIiwiaWF0IjoxNzY0OTM3NDk1LCJleHAiOjE3NjUwMjM4OTV9.XXXymKXUsSYG3UGL1fiyYJQ-QOy1FOz4Q-HSLyDmRxs'}</msg>
+<arg>${bodyResponse.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-05T09:25:18.081670" elapsed="0.002889"/>
+</kw>
+<return>
+<value>${bodyResponse}</value>
+<status status="PASS" start="2025-12-05T09:25:18.084768" elapsed="0.000193"/>
+</return>
+<msg time="2025-12-05T09:25:18.085543" level="INFO">${bodyResponse} = &lt;Response [200]&gt;</msg>
+<var>${bodyResponse}</var>
+<arg>${USER_MAIL}</arg>
+<arg>${USER_PASSWORD}</arg>
+<arg>${STATUS_CODE_OK}</arg>
+<status status="PASS" start="2025-12-05T09:25:17.126490" elapsed="0.959167"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${STATUS_CODE_OK}</arg>
+<arg>${bodyResponse}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-12-05T09:25:18.086128" elapsed="0.000944"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bodyResponse.json()['msg']}</arg>
+<arg>Olá ${bodyResponse.json()['user']['fullName']}, autenticação autorizada com sucesso!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-05T09:25:18.087504" elapsed="0.002631"/>
+</kw>
+<status status="PASS" start="2025-12-05T09:25:17.126148" elapsed="0.964179"/>
+</kw>
+<status status="PASS" start="2025-12-05T09:25:17.125538" elapsed="0.965190"/>
+</test>
+<test id="s1-t2" name="Cenário 02: Realizar Login com Email Válido e Senha Inválida" line="10">
+<kw name="Realizar Login com Email Válido e Senha Inválida" owner="login">
+<kw name="Realizar Login" owner="login">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-12-05T09:25:18.094850" level="INFO">${body} = {'mail': 'blacklist_robot@qa.com', 'password': 'p4Hg83@%sqRw132'}</msg>
+<var>${body}</var>
+<arg>mail=${mail}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-12-05T09:25:18.094219" elapsed="0.000713"/>
+</kw>
+<kw name="Criar Sessao" owner="login">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-12-05T09:25:18.096452" level="INFO">${headers} = {'accpet': 'application/json', 'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>accpet=${APPLICATION}</arg>
+<arg>Content-Type=${APPLICATION}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-12-05T09:25:18.095801" elapsed="0.000726"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-12-05T09:25:18.097523" level="INFO">Creating Session using : alias=develop, url=https://api-blacklist.qacoders.dev.br/api, headers={'accpet': 'application/json', 'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>alias=${SESSION_ALIAS}</arg>
+<arg>url=${BASE_URL}</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-12-05T09:25:18.096815" elapsed="0.005028"/>
+</kw>
+<status status="PASS" start="2025-12-05T09:25:18.095275" elapsed="0.007110"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-12-05T09:25:19.047848" level="INFO">POST Request : url=https://api-blacklist.qacoders.dev.br/api/login 
+ path_url=/api/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'accpet': 'application/json', 'Content-Type': 'application/json', 'Content-Length': '65'} 
+ body=b'{"mail": "blacklist_robot@qa.com", "password": "p4Hg83@%sqRw132"}' 
+ </msg>
+<msg time="2025-12-05T09:25:19.048265" level="INFO">POST Response : url=https://api-blacklist.qacoders.dev.br/api/login 
+ status=400, reason=Bad Request 
+ headers={'Access-Control-Allow-Origin': '*', 'Content-Length': '55', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Fri, 05 Dec 2025 12:24:56 GMT', 'Etag': 'W/"37-9q6p8iabt/LayQQx7+su7bYXDck"', 'X-Powered-By': 'Express'} 
+ body={"alert":"E-mail ou senha informados são inválidos."} 
+ </msg>
+<msg time="2025-12-05T09:25:19.049034" level="INFO">${bodyResponse} = &lt;Response [400]&gt;</msg>
+<var>${bodyResponse}</var>
+<arg>alias=${SESSION_ALIAS}</arg>
+<arg>url=/login</arg>
+<arg>json=${body}</arg>
+<arg>verify=${True}</arg>
+<arg>expected_status=${status_code}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-12-05T09:25:18.102779" elapsed="0.946390"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-05T09:25:19.051643" level="INFO">{'alert': 'E-mail ou senha informados são inválidos.'}</msg>
+<arg>${bodyResponse.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-05T09:25:19.049697" elapsed="0.002163"/>
+</kw>
+<return>
+<value>${bodyResponse}</value>
+<status status="PASS" start="2025-12-05T09:25:19.052116" elapsed="0.000234"/>
+</return>
+<msg time="2025-12-05T09:25:19.053159" level="INFO">${bodyResponse} = &lt;Response [400]&gt;</msg>
+<var>${bodyResponse}</var>
+<arg>${USER_MAIL}</arg>
+<arg>${USER_PASSWORD}132</arg>
+<arg>${STATUS_CODE_BAD_REQUEST}</arg>
+<status status="PASS" start="2025-12-05T09:25:18.093334" elapsed="0.959949"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${STATUS_CODE_BAD_REQUEST}</arg>
+<arg>${bodyResponse}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-12-05T09:25:19.053822" elapsed="0.000947"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bodyResponse.json()['alert']}</arg>
+<arg>${ALERT_400}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-05T09:25:19.055315" elapsed="0.002163"/>
+</kw>
+<status status="PASS" start="2025-12-05T09:25:18.092498" elapsed="0.965275"/>
+</kw>
+<status status="PASS" start="2025-12-05T09:25:18.091358" elapsed="0.967035"/>
+</test>
+<test id="s1-t3" name="Cenário 03: Realizar Login com Email Inválido e Senha Válida" line="13">
+<kw name="Realizar Login com Email Inválido e Senha Válida" owner="login">
+<kw name="Realizar Login" owner="login">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-12-05T09:25:19.064457" level="INFO">${body} = {'mail': 'blacklist_robot@qa.com.br', 'password': 'p4Hg83@%sqRw'}</msg>
+<var>${body}</var>
+<arg>mail=${mail}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-12-05T09:25:19.063435" elapsed="0.001137"/>
+</kw>
+<kw name="Criar Sessao" owner="login">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-12-05T09:25:19.067014" level="INFO">${headers} = {'accpet': 'application/json', 'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>accpet=${APPLICATION}</arg>
+<arg>Content-Type=${APPLICATION}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-12-05T09:25:19.066006" elapsed="0.001121"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-12-05T09:25:19.068732" level="INFO">Creating Session using : alias=develop, url=https://api-blacklist.qacoders.dev.br/api, headers={'accpet': 'application/json', 'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>alias=${SESSION_ALIAS}</arg>
+<arg>url=${BASE_URL}</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-12-05T09:25:19.067627" elapsed="0.001826"/>
+</kw>
+<status status="PASS" start="2025-12-05T09:25:19.065145" elapsed="0.004609"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-12-05T09:25:19.323791" level="INFO">POST Request : url=https://api-blacklist.qacoders.dev.br/api/login 
+ path_url=/api/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'accpet': 'application/json', 'Content-Type': 'application/json', 'Content-Length': '65'} 
+ body=b'{"mail": "blacklist_robot@qa.com.br", "password": "p4Hg83@%sqRw"}' 
+ </msg>
+<msg time="2025-12-05T09:25:19.324092" level="INFO">POST Response : url=https://api-blacklist.qacoders.dev.br/api/login 
+ status=400, reason=Bad Request 
+ headers={'Access-Control-Allow-Origin': '*', 'Content-Length': '55', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Fri, 05 Dec 2025 12:24:57 GMT', 'Etag': 'W/"37-9q6p8iabt/LayQQx7+su7bYXDck"', 'X-Powered-By': 'Express'} 
+ body={"alert":"E-mail ou senha informados são inválidos."} 
+ </msg>
+<msg time="2025-12-05T09:25:19.324533" level="INFO">${bodyResponse} = &lt;Response [400]&gt;</msg>
+<var>${bodyResponse}</var>
+<arg>alias=${SESSION_ALIAS}</arg>
+<arg>url=/login</arg>
+<arg>json=${body}</arg>
+<arg>verify=${True}</arg>
+<arg>expected_status=${status_code}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-12-05T09:25:19.070265" elapsed="0.254372"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-05T09:25:19.327087" level="INFO">{'alert': 'E-mail ou senha informados são inválidos.'}</msg>
+<arg>${bodyResponse.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-05T09:25:19.325164" elapsed="0.002120"/>
+</kw>
+<return>
+<value>${bodyResponse}</value>
+<status status="PASS" start="2025-12-05T09:25:19.327475" elapsed="0.000128"/>
+</return>
+<msg time="2025-12-05T09:25:19.328157" level="INFO">${bodyResponse} = &lt;Response [400]&gt;</msg>
+<var>${bodyResponse}</var>
+<arg>${USER_MAIL}.br</arg>
+<arg>${USER_PASSWORD}</arg>
+<arg>${STATUS_CODE_BAD_REQUEST}</arg>
+<status status="PASS" start="2025-12-05T09:25:19.062052" elapsed="0.266209"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${STATUS_CODE_BAD_REQUEST}</arg>
+<arg>${bodyResponse}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-12-05T09:25:19.328692" elapsed="0.000796"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bodyResponse.json()['alert']}</arg>
+<arg>${ALERT_400}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-05T09:25:19.329901" elapsed="0.001821"/>
+</kw>
+<status status="PASS" start="2025-12-05T09:25:19.060685" elapsed="0.271315"/>
+</kw>
+<status status="PASS" start="2025-12-05T09:25:19.059195" elapsed="0.273276"/>
+</test>
+<doc>Teste da API de usuários</doc>
+<status status="PASS" start="2025-12-05T09:25:17.055314" elapsed="2.278509"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="3" fail="0" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
