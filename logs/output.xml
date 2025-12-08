@@ -1,175 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.3 on linux)" generated="2025-12-08T17:10:18.431557" rpa="false" schemaversion="5">
-<suite id="s1" name="Cost Center" source="/home/diogo/Documentos/tqc-blacklist/tests/ui/cost_center/cost_center.robot">
-<test id="s1-t1" name="Cenario 01: Cadastrar Novo Centro de Custo" line="10">
+<robot generator="Robot 7.3.2 (Python 3.12.3 on linux)" generated="2025-12-08T17:28:25.329188" rpa="false" schemaversion="5">
+<suite id="s1" name="Department" source="/home/diogo/Documentos/tqc-blacklist/tests/ui/department/department.robot">
+<test id="s1-t1" name="Cenario 01: Cadastrar Novo Departamento" line="11">
 <kw name="Abrir Navegador" owner="common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:18.849141" level="INFO">Opening browser 'chrome' to base url 'https://blacklist.qacoders.dev.br/login'.</msg>
+<msg time="2025-12-08T17:28:25.746453" level="INFO">Opening browser 'chrome' to base url 'https://blacklist.qacoders.dev.br/login'.</msg>
 <arg>url=${BASE_URL_UI}/login</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-08T17:10:18.848801" elapsed="2.937875"/>
+<status status="PASS" start="2025-12-08T17:28:25.746125" elapsed="2.940289"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-08T17:10:21.787005" elapsed="0.055137"/>
+<status status="PASS" start="2025-12-08T17:28:28.686678" elapsed="0.056658"/>
 </kw>
-<status status="PASS" start="2025-12-08T17:10:18.847611" elapsed="2.994736"/>
+<status status="PASS" start="2025-12-08T17:28:25.744872" elapsed="2.998658"/>
 </kw>
 <kw name="Dado que estou na página de login" owner="login">
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
 <arg>${BASE_URL_UI}/login</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-12-08T17:10:21.843133" elapsed="0.013044"/>
+<status status="PASS" start="2025-12-08T17:28:28.744744" elapsed="0.013102"/>
 </kw>
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:21.861732" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/login'.</msg>
+<msg time="2025-12-08T17:28:28.769249" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/login'.</msg>
 <arg>${BASE_URL_UI}/login</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-12-08T17:10:21.856515" elapsed="0.005358"/>
+<status status="PASS" start="2025-12-08T17:28:28.758302" elapsed="0.011224"/>
 </kw>
-<status status="PASS" start="2025-12-08T17:10:21.842674" elapsed="0.019343"/>
+<status status="PASS" start="2025-12-08T17:28:28.743972" elapsed="0.025856"/>
 </kw>
 <kw name="Quando eu inserir um usuário válido e senha válida" owner="login">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ID_EMAIL}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-08T17:10:21.862877" elapsed="0.031208"/>
+<status status="PASS" start="2025-12-08T17:28:28.771099" elapsed="0.038882"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:21.894746" level="INFO">Typing text 'blacklist_robot@qa.com' into text field 'id:email'.</msg>
+<msg time="2025-12-08T17:28:28.810550" level="INFO">Typing text 'blacklist_robot@qa.com' into text field 'id:email'.</msg>
 <arg>${ID_EMAIL}</arg>
 <arg>${USER_MAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-08T17:10:21.894396" elapsed="0.197120"/>
+<status status="PASS" start="2025-12-08T17:28:28.810232" elapsed="0.185107"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ID_PASSWORD}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-08T17:10:22.091708" elapsed="0.022362"/>
+<status status="PASS" start="2025-12-08T17:28:28.995535" elapsed="0.018071"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:22.114914" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2025-12-08T17:10:22.144369" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-12-08T17:28:29.014558" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-12-08T17:28:29.048909" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${ID_PASSWORD}</arg>
 <arg>${USER_PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-08T17:10:22.114470" elapsed="0.098148"/>
+<status status="PASS" start="2025-12-08T17:28:29.013961" elapsed="0.107491"/>
 </kw>
-<status status="PASS" start="2025-12-08T17:10:21.862411" elapsed="0.350351"/>
+<status status="PASS" start="2025-12-08T17:28:28.770500" elapsed="0.351064"/>
 </kw>
 <kw name="E clicar no botão de login" owner="login">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ID_LOGIN}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-08T17:10:22.213408" elapsed="0.019477"/>
+<status status="PASS" start="2025-12-08T17:28:29.122173" elapsed="0.022822"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:22.233288" level="INFO">Clicking button 'id:login'.</msg>
+<msg time="2025-12-08T17:28:29.145657" level="INFO">Clicking button 'id:login'.</msg>
 <arg>${ID_LOGIN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-08T17:10:22.233071" elapsed="0.102839"/>
+<status status="PASS" start="2025-12-08T17:28:29.145413" elapsed="0.093838"/>
 </kw>
-<status status="PASS" start="2025-12-08T17:10:22.213066" elapsed="0.123043"/>
+<status status="PASS" start="2025-12-08T17:28:29.121818" elapsed="0.117664"/>
 </kw>
 <kw name="Então devo ser redirecionado para a página Home" owner="login">
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
 <arg>${BASE_URL_UI}/home</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-12-08T17:10:22.337068" elapsed="1.522282"/>
+<status status="PASS" start="2025-12-08T17:28:29.241356" elapsed="1.735528"/>
 </kw>
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:23.863827" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/home'.</msg>
+<msg time="2025-12-08T17:28:30.979467" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/home'.</msg>
 <arg>${BASE_URL_UI}/home</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-12-08T17:10:23.859657" elapsed="0.004264"/>
+<status status="PASS" start="2025-12-08T17:28:30.977067" elapsed="0.002473"/>
 </kw>
-<status status="PASS" start="2025-12-08T17:10:22.336525" elapsed="1.527490"/>
+<status status="PASS" start="2025-12-08T17:28:29.239898" elapsed="1.739726"/>
 </kw>
-<kw name="Dado que estou na página de centro de custo" owner="cost_center">
+<kw name="Dado que estou na página de departamento" owner="department">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:23.864828" level="INFO">Clicking element 'id:Cadastros'.</msg>
+<msg time="2025-12-08T17:28:30.980325" level="INFO">Clicking element 'id:Cadastros'.</msg>
 <arg>${ID_CADASTRO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-08T17:10:23.864620" elapsed="0.092154"/>
+<status status="PASS" start="2025-12-08T17:28:30.980121" elapsed="0.082764"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_CONST_CENTE}</arg>
+<arg>${ID_DEPARTMENT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-08T17:10:23.957068" elapsed="0.252225"/>
+<status status="PASS" start="2025-12-08T17:28:31.063081" elapsed="0.255839"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:24.209969" level="INFO">Clicking element 'id:Centro de Custo'.</msg>
-<arg>${ID_CONST_CENTE}</arg>
+<msg time="2025-12-08T17:28:31.319557" level="INFO">Clicking element 'id:Departamento'.</msg>
+<arg>${ID_DEPARTMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-08T17:10:24.209537" elapsed="0.091925"/>
+<status status="PASS" start="2025-12-08T17:28:31.319206" elapsed="0.084388"/>
 </kw>
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
-<arg>${BASE_URL_UI}/costCenter</arg>
+<arg>${BASE_URL_UI}/department</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-12-08T17:10:24.302104" elapsed="0.845909"/>
+<status status="PASS" start="2025-12-08T17:28:31.403875" elapsed="0.872959"/>
 </kw>
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:25.151798" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/costCenter'.</msg>
-<arg>${BASE_URL_UI}/costCenter</arg>
+<msg time="2025-12-08T17:28:32.292725" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/department'.</msg>
+<arg>${BASE_URL_UI}/department</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.148202" elapsed="0.003740"/>
+<status status="PASS" start="2025-12-08T17:28:32.277498" elapsed="0.015543"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:25.152643" level="INFO">Verifying element 'xpath://h1[text()='Centro de Custo']' contains exact text 'Centro de Custo'.</msg>
-<arg>xpath://h1[text()='Centro de Custo']</arg>
-<arg>Centro de Custo</arg>
+<msg time="2025-12-08T17:28:32.294596" level="INFO">Verifying element 'xpath://h1[text()='Departamento']' contains exact text 'Departamento'.</msg>
+<arg>xpath://h1[text()='Departamento']</arg>
+<arg>Departamento</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.152290" elapsed="0.024935"/>
+<status status="PASS" start="2025-12-08T17:28:32.293698" elapsed="0.081023"/>
 </kw>
-<status status="PASS" start="2025-12-08T17:10:23.864320" elapsed="1.313079"/>
+<status status="PASS" start="2025-12-08T17:28:30.979846" elapsed="1.395096"/>
 </kw>
-<kw name="Quando clicar para adicionar um novo centro de custo" owner="cost_center">
+<kw name="Quando clicar para adicionar um novo departamento" owner="department">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//button[normalize-space()='Novo Centro de Custo']</arg>
+<arg>//button[normalize-space()='Novo Departamento']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.178163" elapsed="0.021614"/>
+<status status="PASS" start="2025-12-08T17:28:32.376457" elapsed="0.025750"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:25.200620" level="INFO">Clicking button '//button[normalize-space()='Novo Centro de Custo']'.</msg>
-<arg>//button[normalize-space()='Novo Centro de Custo']</arg>
+<msg time="2025-12-08T17:28:32.402645" level="INFO">Clicking button '//button[normalize-space()='Novo Departamento']'.</msg>
+<arg>//button[normalize-space()='Novo Departamento']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.200271" elapsed="0.104826"/>
+<status status="PASS" start="2025-12-08T17:28:32.402436" elapsed="0.102653"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath://h2[normalize-space()='Novo Centro de Custo']</arg>
+<arg>xpath://h2[normalize-space()='Novo Departamento']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.305344" elapsed="0.022477"/>
+<status status="PASS" start="2025-12-08T17:28:32.505553" elapsed="0.076831"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:25.328219" level="INFO">Verifying element 'xpath://h2[normalize-space()='Novo Centro de Custo']' contains exact text 'Novo Centro de Custo'.</msg>
-<arg>xpath://h2[normalize-space()='Novo Centro de Custo']</arg>
-<arg>Novo Centro de Custo</arg>
+<msg time="2025-12-08T17:28:32.582906" level="INFO">Verifying element 'xpath://h2[normalize-space()='Novo Departamento']' contains exact text 'Novo Departamento'.</msg>
+<arg>xpath://h2[normalize-space()='Novo Departamento']</arg>
+<arg>Novo Departamento</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.328013" elapsed="0.017083"/>
+<status status="PASS" start="2025-12-08T17:28:32.582641" elapsed="0.031209"/>
 </kw>
-<status status="PASS" start="2025-12-08T17:10:25.177670" elapsed="0.168309"/>
+<status status="PASS" start="2025-12-08T17:28:32.375596" elapsed="0.238476"/>
 </kw>
-<kw name="E preencher os dados obrigatórios" owner="cost_center">
+<kw name="E preencher os dados obrigatórios" owner="department">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:25.349971" level="INFO">Typing text 'QA Blacklist 1649' into text field 'id:costCentername'.</msg>
-<arg>${ID_CONST_CENTERNAME}</arg>
-<arg>${INPUT_COST_CENTER}</arg>
+<msg time="2025-12-08T17:28:32.616566" level="INFO">Typing text 'QA Robot 2026' into text field 'id:departmentName'.</msg>
+<arg>${ID_DEPARTMENT_NAME}</arg>
+<arg>${INPUT_DEPARTMENT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.349151" elapsed="0.340878"/>
+<status status="PASS" start="2025-12-08T17:28:32.615676" elapsed="0.303376"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-08T17:28:42.920747" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-08T17:28:32.919767" elapsed="10.001319"/>
 </kw>
 <kw name="Get List Items" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:25.961676" level="INFO">${itens} = ['Diretoria', 'Operações QA myiH', 'Teste', 'Teste um', 'Recurso Humano', 'Operacional', 'Operações UNG', 'Inovacao &amp; DB', 'Engenharia &amp; AE', 'Administrativo &amp; SM', 'Operações HKV', 'Tecnologia &amp; OR',...</msg>
+<msg time="2025-12-08T17:28:42.966126" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+#0 0x5d241448caca &lt;unknown&gt;
+#1 0x5d2413ed8b08 &lt;unknown&gt;
+#2 0x5d2413f1cc3b &lt;unknown&gt;
+#3 0x5d2413f51506 &lt;unknown&gt;
+#4 0x5d2413f4bb40 &lt;unknown&gt;
+#5 0x5d2413f4ae92 &lt;unknown&gt;
+#6 0x5d2413e9fe15 &lt;unknown&gt;
+#7 0x5d2414453a99 &lt;unknown&gt;
+#8 0x5d2414456a6c &lt;unknown&gt;
+#9 0x5d241443cd29 &lt;unknown&gt;
+#10 0x5d2414457665 &lt;unknown&gt;
+#11 0x5d24144246a3 &lt;unknown&gt;
+#12 0x5d2413e9d682 &lt;unknown&gt;
+#13 0x7e44ad42a1ca &lt;unknown&gt;
+#14 0x7e44ad42a28b __libc_start_main
+#15 0x5d2413e6016a _start
+</msg>
+<msg time="2025-12-08T17:28:42.966493" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=142.0.7444.134); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+#0 0x5d241448caca &lt;unknown&gt;
+#1 0x5d2413ed8cdb &lt;unknown&gt;
+#2 0x5d2413ebf6ae &lt;unknown&gt;
+#3 0x5d2413ee79ca &lt;unknown&gt;
+#4 0x5d2413f59cef &lt;unknown&gt;
+#5 0x5d2413f776a5 &lt;unknown&gt;
+#6 0x5d2413f1daca &lt;unknown&gt;
+#7 0x5d2413f1e7d1 &lt;unknown&gt;
+#8 0x5d2414453a99 &lt;unknown&gt;
+#9 0x5d2414456a6c &lt;unknown&gt;
+#10 0x5d241443cd29 &lt;unknown&gt;
+#11 0x5d2414457665 &lt;unknown&gt;
+#12 0x5d24144246a3 &lt;unknown&gt;
+#13 0x5d24144797b8 &lt;unknown&gt;
+#14 0x5d2414479993 &lt;unknown&gt;
+#15 0x5d241448ba63 &lt;unknown&gt;
+#16 0x7e44ad49caa4 &lt;unknown&gt;
+#17 0x7e44ad529c6c &lt;unknown&gt;
+</msg>
 <var>${itens}</var>
 <arg>xpath=//select</arg>
 <doc>Returns all labels or values of selection list ``locator``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.690240" elapsed="0.271486"/>
+<status status="FAIL" start="2025-12-08T17:28:42.921772" elapsed="0.047258">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=142.0.7444.134); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+#0 0x5d241448caca &lt;unknown&gt;
+#1 0x5d2413ed8cdb &lt;unknown&gt;
+#2 0x5d2413ebf6ae &lt;unknown&gt;
+#3 0x5d2413ee79ca &lt;unknown&gt;
+#4 0x5d2413f59cef &lt;unknown&gt;
+#5 0x5d2413f776a5 &lt;unknown&gt;
+#6 0x5d2413f1daca &lt;unknown&gt;
+#7 0x5d2413f1e7d1 &lt;unknown&gt;
+#8 0x5d2414453a99 &lt;unknown&gt;
+#9 0x5d2414456a6c &lt;unknown&gt;
+#10 0x5d241443cd29 &lt;unknown&gt;
+#11 0x5d2414457665 &lt;unknown&gt;
+#12 0x5d24144246a3 &lt;unknown&gt;
+#13 0x5d24144797b8 &lt;unknown&gt;
+#14 0x5d2414479993 &lt;unknown&gt;
+#15 0x5d241448ba63 &lt;unknown&gt;
+#16 0x7e44ad49caa4 &lt;unknown&gt;
+#17 0x7e44ad529c6c &lt;unknown&gt;
+</status>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2025-12-08T17:10:25.962051" level="INFO">${itens_filtrados} = []</msg>
 <var>${itens_filtrados}</var>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.961895" elapsed="0.000185"/>
+<status status="NOT RUN" start="2025-12-08T17:28:42.969301" elapsed="0.000064"/>
 </kw>
 <for flavor="IN">
 <iter>
@@ -179,608 +247,118 @@
 <arg>${itens_filtrados}</arg>
 <arg>${item}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.962460" elapsed="0.000202"/>
+<status status="NOT RUN" start="2025-12-08T17:28:42.969797" elapsed="0.000049"/>
 </kw>
-<var name="${item}">Diretoria</var>
-<status status="PASS" start="2025-12-08T17:10:25.962331" elapsed="0.000384"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.963170" elapsed="0.000160"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.962928" elapsed="0.000465"/>
-</kw>
-<var name="${item}">Operações QA myiH</var>
-<status status="PASS" start="2025-12-08T17:10:25.962819" elapsed="0.000616"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.963857" elapsed="0.000148"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.963630" elapsed="0.000437"/>
-</kw>
-<var name="${item}">Teste</var>
-<status status="PASS" start="2025-12-08T17:10:25.963528" elapsed="0.000581"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.964537" elapsed="0.000151"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.964310" elapsed="0.000439"/>
-</kw>
-<var name="${item}">Teste um</var>
-<status status="PASS" start="2025-12-08T17:10:25.964197" elapsed="0.000593"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.965214" elapsed="0.000158"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.964983" elapsed="0.000451"/>
-</kw>
-<var name="${item}">Recurso Humano</var>
-<status status="PASS" start="2025-12-08T17:10:25.964880" elapsed="0.000597"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.965903" elapsed="0.000148"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.965676" elapsed="0.000436"/>
-</kw>
-<var name="${item}">Operacional</var>
-<status status="PASS" start="2025-12-08T17:10:25.965573" elapsed="0.000581"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.966588" elapsed="0.000148"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.966353" elapsed="0.000445"/>
-</kw>
-<var name="${item}">Operações UNG</var>
-<status status="PASS" start="2025-12-08T17:10:25.966244" elapsed="0.000596"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.967263" elapsed="0.000156"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.967035" elapsed="0.000445"/>
-</kw>
-<var name="${item}">Inovacao &amp; DB</var>
-<status status="PASS" start="2025-12-08T17:10:25.966934" elapsed="0.000588"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.967937" elapsed="0.000147"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.967712" elapsed="0.000432"/>
-</kw>
-<var name="${item}">Engenharia &amp; AE</var>
-<status status="PASS" start="2025-12-08T17:10:25.967611" elapsed="0.000574"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.968622" elapsed="0.000155"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.968391" elapsed="0.000447"/>
-</kw>
-<var name="${item}">Administrativo &amp; SM</var>
-<status status="PASS" start="2025-12-08T17:10:25.968275" elapsed="0.000650"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.969362" elapsed="0.000150"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.969125" elapsed="0.000449"/>
-</kw>
-<var name="${item}">Operações HKV</var>
-<status status="PASS" start="2025-12-08T17:10:25.969021" elapsed="0.000595"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.970037" elapsed="0.000158"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.969808" elapsed="0.000450"/>
-</kw>
-<var name="${item}">Tecnologia &amp; OR</var>
-<status status="PASS" start="2025-12-08T17:10:25.969707" elapsed="0.000594"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.970724" elapsed="0.000281"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.970499" elapsed="0.000572"/>
-</kw>
-<var name="${item}">Operacional &amp; FL</var>
-<status status="PASS" start="2025-12-08T17:10:25.970398" elapsed="0.000716"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.971549" elapsed="0.000150"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.971321" elapsed="0.000440"/>
-</kw>
-<var name="${item}">Comercial &amp; KE</var>
-<status status="PASS" start="2025-12-08T17:10:25.971212" elapsed="0.000591"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.972219" elapsed="0.000154"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.971996" elapsed="0.000439"/>
-</kw>
-<var name="${item}">Gestao &amp; IK</var>
-<status status="PASS" start="2025-12-08T17:10:25.971894" elapsed="0.000585"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.972892" elapsed="0.000148"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.972668" elapsed="0.000433"/>
-</kw>
-<var name="${item}">Projetos &amp; WJ</var>
-<status status="PASS" start="2025-12-08T17:10:25.972568" elapsed="0.000576"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.973567" elapsed="0.000148"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.973342" elapsed="0.000433"/>
-</kw>
-<var name="${item}">Operações CRI</var>
-<status status="PASS" start="2025-12-08T17:10:25.973234" elapsed="0.000583"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.974233" elapsed="0.000152"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.974011" elapsed="0.000435"/>
-</kw>
-<var name="${item}">Financeiro &amp; LY</var>
-<status status="PASS" start="2025-12-08T17:10:25.973905" elapsed="0.000582"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.974899" elapsed="0.000148"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.974676" elapsed="0.000432"/>
-</kw>
-<var name="${item}">Marketing &amp; LG</var>
-<status status="PASS" start="2025-12-08T17:10:25.974576" elapsed="0.000574"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.975580" elapsed="0.000157"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.975345" elapsed="0.000453"/>
-</kw>
-<var name="${item}">Gestao &amp; SL</var>
-<status status="PASS" start="2025-12-08T17:10:25.975239" elapsed="0.000602"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.976273" elapsed="0.000162"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.976037" elapsed="0.000459"/>
-</kw>
-<var name="${item}">Operações QA JFou</var>
-<status status="PASS" start="2025-12-08T17:10:25.975931" elapsed="0.000608"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.976955" elapsed="0.000185"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.976729" elapsed="0.000476"/>
-</kw>
-<var name="${item}">Desenvolvimento &amp; SK</var>
-<status status="PASS" start="2025-12-08T17:10:25.976629" elapsed="0.000620"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.977690" elapsed="0.000147"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.977460" elapsed="0.000438"/>
-</kw>
-<var name="${item}">Operações</var>
-<status status="PASS" start="2025-12-08T17:10:25.977351" elapsed="0.000590"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.978364" elapsed="0.000152"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.978130" elapsed="0.000447"/>
-</kw>
-<var name="${item}">Operações QIY</var>
-<status status="PASS" start="2025-12-08T17:10:25.978030" elapsed="0.000588"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.979034" elapsed="0.000148"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.978809" elapsed="0.000435"/>
-</kw>
-<var name="${item}">Operações GCJ</var>
-<status status="PASS" start="2025-12-08T17:10:25.978708" elapsed="0.000579"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.979718" elapsed="0.000147"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.979493" elapsed="0.000435"/>
-</kw>
-<var name="${item}">Btgzgbjxeg</var>
-<status status="PASS" start="2025-12-08T17:10:25.979390" elapsed="0.000580"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.980396" elapsed="0.000147"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.980163" elapsed="0.000443"/>
-</kw>
-<var name="${item}">Bpkyzeakgv</var>
-<status status="PASS" start="2025-12-08T17:10:25.980061" elapsed="0.000587"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.981066" elapsed="0.000146"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.980844" elapsed="0.000429"/>
-</kw>
-<var name="${item}">Bjnprlylnm</var>
-<status status="PASS" start="2025-12-08T17:10:25.980738" elapsed="0.000585"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.981742" elapsed="0.000145"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.981516" elapsed="0.000433"/>
-</kw>
-<var name="${item}">Bcojgteapo</var>
-<status status="PASS" start="2025-12-08T17:10:25.981412" elapsed="0.000580"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.982415" elapsed="0.000147"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.982186" elapsed="0.000438"/>
-</kw>
-<var name="${item}">Bqtcdaftqm</var>
-<status status="PASS" start="2025-12-08T17:10:25.982085" elapsed="0.000582"/>
-</iter>
-<iter>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Append To List" owner="Collections">
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.983079" elapsed="0.000148"/>
-</kw>
-<arg>'${item}' != '' and '${item}' != 'Diretoria'</arg>
-<arg>Append To List</arg>
-<arg>${itens_filtrados}</arg>
-<arg>${item}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.982856" elapsed="0.000432"/>
-</kw>
-<var name="${item}">Bheoxupzpx</var>
-<status status="PASS" start="2025-12-08T17:10:25.982756" elapsed="0.000581"/>
+<var name="${item}"/>
+<status status="NOT RUN" start="2025-12-08T17:28:42.969601" elapsed="0.000312"/>
 </iter>
 <var>${item}</var>
 <value>@{itens}</value>
-<status status="PASS" start="2025-12-08T17:10:25.962151" elapsed="0.021234"/>
+<status status="NOT RUN" start="2025-12-08T17:28:42.969462" elapsed="0.000520"/>
 </for>
 <kw name="Get From List" owner="Collections">
-<msg time="2025-12-08T17:10:25.983681" level="INFO">${primeiro} = Operações QA myiH</msg>
 <var>${primeiro}</var>
 <arg>${itens_filtrados}</arg>
 <arg>0</arg>
 <doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.983517" elapsed="0.000194"/>
+<status status="NOT RUN" start="2025-12-08T17:28:42.970165" elapsed="0.000040"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:25.984023" level="INFO">Selecting options from selection list 'xpath=//select' by label Operações QA myiH.</msg>
 <arg>xpath=//select</arg>
 <arg>${primeiro}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-12-08T17:10:25.983834" elapsed="0.052527"/>
+<status status="NOT RUN" start="2025-12-08T17:28:42.970384" elapsed="0.000042"/>
 </kw>
-<status status="PASS" start="2025-12-08T17:10:25.347557" elapsed="0.688914"/>
+<status status="FAIL" start="2025-12-08T17:28:32.614765" elapsed="10.355855">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=142.0.7444.134); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+#0 0x5d241448caca &lt;unknown&gt;
+#1 0x5d2413ed8cdb &lt;unknown&gt;
+#2 0x5d2413ebf6ae &lt;unknown&gt;
+#3 0x5d2413ee79ca &lt;unknown&gt;
+#4 0x5d2413f59cef &lt;unknown&gt;
+#5 0x5d2413f776a5 &lt;unknown&gt;
+#6 0x5d2413f1daca &lt;unknown&gt;
+#7 0x5d2413f1e7d1 &lt;unknown&gt;
+#8 0x5d2414453a99 &lt;unknown&gt;
+#9 0x5d2414456a6c &lt;unknown&gt;
+#10 0x5d241443cd29 &lt;unknown&gt;
+#11 0x5d2414457665 &lt;unknown&gt;
+#12 0x5d24144246a3 &lt;unknown&gt;
+#13 0x5d24144797b8 &lt;unknown&gt;
+#14 0x5d2414479993 &lt;unknown&gt;
+#15 0x5d241448ba63 &lt;unknown&gt;
+#16 0x7e44ad49caa4 &lt;unknown&gt;
+#17 0x7e44ad529c6c &lt;unknown&gt;
+</status>
 </kw>
-<kw name="E salvar o cadastro" owner="cost_center">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//button[normalize-space()='Salvar']</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-08T17:10:26.036963" elapsed="0.017896"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-08T17:10:26.055289" level="INFO">Clicking button '//button[normalize-space()='Salvar']'.</msg>
-<arg>//button[normalize-space()='Salvar']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-08T17:10:26.055098" elapsed="0.058892"/>
-</kw>
-<status status="PASS" start="2025-12-08T17:10:26.036689" elapsed="0.077418"/>
+<kw name="E salvar o cadastro" owner="department">
+<status status="NOT RUN" start="2025-12-08T17:28:42.970918" elapsed="0.000064"/>
 </kw>
 <kw name="Fechar Navegador" owner="common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-08T17:10:26.114796" elapsed="0.094988"/>
+<status status="PASS" start="2025-12-08T17:28:42.971662" elapsed="0.040975"/>
 </kw>
-<status status="PASS" start="2025-12-08T17:10:26.114486" elapsed="0.095485"/>
+<status status="PASS" start="2025-12-08T17:28:42.971332" elapsed="0.041542"/>
 </kw>
-<doc>Realizar login, navega até Centro de Custo, cadastra um novo Centro de Custo e verificar se foi cadastrado com sucesso</doc>
-<status status="PASS" start="2025-12-08T17:10:18.846539" elapsed="7.363592"/>
+<doc>Realizar login, navega até Departamento, cadastra um novo Departamento e verificar se foi cadastrado com sucesso</doc>
+<status status="FAIL" start="2025-12-08T17:28:25.743998" elapsed="17.269057">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=142.0.7444.134); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+#0 0x5d241448caca &lt;unknown&gt;
+#1 0x5d2413ed8cdb &lt;unknown&gt;
+#2 0x5d2413ebf6ae &lt;unknown&gt;
+#3 0x5d2413ee79ca &lt;unknown&gt;
+#4 0x5d2413f59cef &lt;unknown&gt;
+#5 0x5d2413f776a5 &lt;unknown&gt;
+#6 0x5d2413f1daca &lt;unknown&gt;
+#7 0x5d2413f1e7d1 &lt;unknown&gt;
+#8 0x5d2414453a99 &lt;unknown&gt;
+#9 0x5d2414456a6c &lt;unknown&gt;
+#10 0x5d241443cd29 &lt;unknown&gt;
+#11 0x5d2414457665 &lt;unknown&gt;
+#12 0x5d24144246a3 &lt;unknown&gt;
+#13 0x5d24144797b8 &lt;unknown&gt;
+#14 0x5d2414479993 &lt;unknown&gt;
+#15 0x5d241448ba63 &lt;unknown&gt;
+#16 0x7e44ad49caa4 &lt;unknown&gt;
+#17 0x7e44ad529c6c &lt;unknown&gt;
+</status>
 </test>
-<status status="PASS" start="2025-12-08T17:10:18.432343" elapsed="7.779286"/>
+<status status="FAIL" start="2025-12-08T17:28:25.330016" elapsed="17.683863"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Cost Center" id="s1" pass="1" fail="0" skip="0">Cost Center</stat>
+<stat name="Department" id="s1" pass="0" fail="1" skip="0">Department</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-12-08T17:28:42.966126" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+#0 0x5d241448caca &lt;unknown&gt;
+#1 0x5d2413ed8b08 &lt;unknown&gt;
+#2 0x5d2413f1cc3b &lt;unknown&gt;
+#3 0x5d2413f51506 &lt;unknown&gt;
+#4 0x5d2413f4bb40 &lt;unknown&gt;
+#5 0x5d2413f4ae92 &lt;unknown&gt;
+#6 0x5d2413e9fe15 &lt;unknown&gt;
+#7 0x5d2414453a99 &lt;unknown&gt;
+#8 0x5d2414456a6c &lt;unknown&gt;
+#9 0x5d241443cd29 &lt;unknown&gt;
+#10 0x5d2414457665 &lt;unknown&gt;
+#11 0x5d24144246a3 &lt;unknown&gt;
+#12 0x5d2413e9d682 &lt;unknown&gt;
+#13 0x7e44ad42a1ca &lt;unknown&gt;
+#14 0x7e44ad42a28b __libc_start_main
+#15 0x5d2413e6016a _start
+</msg>
 </errors>
 </robot>
