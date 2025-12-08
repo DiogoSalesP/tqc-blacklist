@@ -1,111 +1,588 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.3 on linux)" generated="2025-12-08T15:37:00.787250" rpa="false" schemaversion="5">
-<suite id="s1" name="Login" source="/home/diogo/Documentos/tqc-blacklist/tests/ui/login/login.robot">
-<test id="s1-t1" name="Cenario 01: Login de usuário com sucesso" line="7">
-<kw name="Abrir Navegador" owner="login" type="SETUP">
+<robot generator="Robot 7.3.2 (Python 3.12.3 on linux)" generated="2025-12-08T16:21:29.158494" rpa="false" schemaversion="5">
+<suite id="s1" name="Client" source="/home/diogo/Documentos/tqc-blacklist/tests/ui/cliente/client.robot">
+<test id="s1-t1" name="Cenario 01: Cadastrar Novo Cliente com Sucesso" line="11">
+<kw name="Abrir Navegador" owner="common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-08T15:37:00.974114" level="INFO">Opening browser 'chrome' to base url 'https://blacklist.qacoders.dev.br/login'.</msg>
+<msg time="2025-12-08T16:21:29.557677" level="INFO">Opening browser 'chrome' to base url 'https://blacklist.qacoders.dev.br/login'.</msg>
 <arg>url=${BASE_URL_UI}/login</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-08T15:37:00.973776" elapsed="4.742293"/>
+<status status="PASS" start="2025-12-08T16:21:29.557358" elapsed="3.119197"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-08T15:37:05.716302" elapsed="0.083938"/>
+<status status="PASS" start="2025-12-08T16:21:32.676956" elapsed="0.058943"/>
 </kw>
-<status status="PASS" start="2025-12-08T15:37:00.973113" elapsed="4.827399"/>
+<status status="PASS" start="2025-12-08T16:21:29.556334" elapsed="3.179730"/>
 </kw>
 <kw name="Dado que estou na página de login" owner="login">
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
 <arg>${BASE_URL_UI}/login</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-12-08T15:37:05.801700" elapsed="0.019043"/>
+<status status="PASS" start="2025-12-08T16:21:32.736833" elapsed="0.008009"/>
 </kw>
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-12-08T15:37:05.835743" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/login'.</msg>
+<msg time="2025-12-08T16:21:32.757372" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/login'.</msg>
 <arg>${BASE_URL_UI}/login</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-12-08T15:37:05.822449" elapsed="0.013688"/>
+<status status="PASS" start="2025-12-08T16:21:32.745197" elapsed="0.012598"/>
 </kw>
-<status status="PASS" start="2025-12-08T15:37:05.801025" elapsed="0.035469"/>
+<status status="PASS" start="2025-12-08T16:21:32.736390" elapsed="0.021741"/>
 </kw>
 <kw name="Quando eu inserir um usuário válido e senha válida" owner="login">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ID_EMAIL}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-08T15:37:05.837461" elapsed="0.049904"/>
+<status status="PASS" start="2025-12-08T16:21:32.759437" elapsed="0.028695"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-08T15:37:05.889501" level="INFO">Typing text 'blacklist_robot@qa.com' into text field 'id:email'.</msg>
+<msg time="2025-12-08T16:21:32.788713" level="INFO">Typing text 'blacklist_robot@qa.com' into text field 'id:email'.</msg>
 <arg>${ID_EMAIL}</arg>
 <arg>${USER_MAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-08T15:37:05.888159" elapsed="0.315804"/>
+<status status="PASS" start="2025-12-08T16:21:32.788357" elapsed="0.188822"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ID_PASSWORD}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-08T15:37:06.204194" elapsed="0.024924"/>
+<status status="PASS" start="2025-12-08T16:21:32.977386" elapsed="0.024247"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-12-08T15:37:06.229801" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2025-12-08T15:37:06.280652" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-12-08T16:21:33.002089" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-12-08T16:21:33.030475" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${ID_PASSWORD}</arg>
 <arg>${USER_PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-08T15:37:06.229455" elapsed="0.144428"/>
+<status status="PASS" start="2025-12-08T16:21:33.001835" elapsed="0.099946"/>
 </kw>
-<status status="PASS" start="2025-12-08T15:37:05.836946" elapsed="0.537102"/>
+<status status="PASS" start="2025-12-08T16:21:32.759025" elapsed="0.342987"/>
 </kw>
 <kw name="E clicar no botão de login" owner="login">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ID_LOGIN}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-08T15:37:06.374962" elapsed="0.042021"/>
+<status status="PASS" start="2025-12-08T16:21:33.102668" elapsed="0.022948"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-08T15:37:06.417504" level="INFO">Clicking button 'id:login'.</msg>
+<msg time="2025-12-08T16:21:33.126036" level="INFO">Clicking button 'id:login'.</msg>
 <arg>${ID_LOGIN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-08T15:37:06.417196" elapsed="0.166527"/>
+<status status="PASS" start="2025-12-08T16:21:33.125806" elapsed="0.098052"/>
 </kw>
-<status status="PASS" start="2025-12-08T15:37:06.374377" elapsed="0.209484"/>
+<status status="PASS" start="2025-12-08T16:21:33.102301" elapsed="0.121847"/>
 </kw>
 <kw name="Então devo ser redirecionado para a página Home" owner="login">
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
 <arg>${BASE_URL_UI}/home</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-12-08T15:37:06.584461" elapsed="1.910206"/>
+<status status="PASS" start="2025-12-08T16:21:33.225376" elapsed="1.905219"/>
 </kw>
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-12-08T15:37:08.512925" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/home'.</msg>
+<msg time="2025-12-08T16:21:35.133345" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/home'.</msg>
 <arg>${BASE_URL_UI}/home</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-12-08T15:37:08.494997" elapsed="0.018573"/>
+<status status="PASS" start="2025-12-08T16:21:35.130780" elapsed="0.002650"/>
 </kw>
-<status status="PASS" start="2025-12-08T15:37:06.584125" elapsed="1.929992"/>
+<status status="PASS" start="2025-12-08T16:21:33.224886" elapsed="1.908638"/>
 </kw>
-<kw name="Fechar Navegador" owner="login" type="TEARDOWN">
+<kw name="Dado que estou na página de clientes" owner="client">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:35.134376" level="INFO">Clicking element 'id:Cadastros'.</msg>
+<arg>${ID_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:35.134159" elapsed="0.085580"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_CLIENTES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:35.219985" elapsed="0.312898"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:35.533524" level="INFO">Clicking element 'id:Clientes'.</msg>
+<arg>${ID_CLIENTES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:35.533163" elapsed="0.092272"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${BASE_URL_UI}/client</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-12-08T16:21:35.625714" elapsed="1.040676"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:36.669467" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/client'.</msg>
+<arg>${BASE_URL_UI}/client</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-12-08T16:21:36.666574" elapsed="0.002973"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:36.669897" level="INFO">Verifying element 'xpath://h1[text()='Clientes']' contains exact text 'Clientes'.</msg>
+<arg>xpath://h1[text()='Clientes']</arg>
+<arg>Clientes</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-12-08T16:21:36.669706" elapsed="0.019755"/>
+</kw>
+<status status="PASS" start="2025-12-08T16:21:35.133842" elapsed="1.555771"/>
+</kw>
+<kw name="Quando clicar para adicionar um novo cliente" owner="client">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[normalize-space()='Novo Cliente']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:36.690428" elapsed="0.015931"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:36.706732" level="INFO">Clicking button '//button[normalize-space()='Novo Cliente']'.</msg>
+<arg>//button[normalize-space()='Novo Cliente']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:36.706547" elapsed="0.094743"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://h5[text()='Novo Cadastro']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:36.801541" elapsed="0.017788"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:36.866717" level="INFO">Element 'xpath://h5[text()='Novo Cadastro']' is displayed.</msg>
+<arg>xpath://h5[text()='Novo Cadastro']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:36.819518" elapsed="0.047312"/>
+</kw>
+<status status="PASS" start="2025-12-08T16:21:36.689987" elapsed="0.176959"/>
+</kw>
+<kw name="E preencher os dados obrigatórios" owner="client">
+<kw name="Preencher Formulario Cliente" owner="common">
+<kw name="Gerar Cliente" owner="generate_random_data">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-12-08T16:21:36.874422" level="INFO">${headers} = {'Content-Type': 'application/x-www-form-urlencoded'}</msg>
+<var>${headers}</var>
+<arg>Content-Type=application/x-www-form-urlencoded</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-12-08T16:21:36.872065" elapsed="0.002550"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-12-08T16:21:36.876401" level="INFO">Creating Session using : alias=4devs, url=https://www.4devs.com.br, headers={'Content-Type': 'application/x-www-form-urlencoded'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<arg>alias=4devs</arg>
+<arg>url=https://www.4devs.com.br</arg>
+<arg>headers=${headers}</arg>
+<arg>verify=${True}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-12-08T16:21:36.875403" elapsed="0.002335"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-12-08T16:21:36.880293" level="INFO">${form_data} = {'acao': 'gerar_pessoa', 'sexo': 'I', 'pontuacao': 'N', 'idade': '18', 'cep_estado': 'CE', 'txt_qtde': '1', 'cep_cidade': '1638'}</msg>
+<var>${form_data}</var>
+<arg>acao=gerar_pessoa</arg>
+<arg>sexo=I</arg>
+<arg>pontuacao=N</arg>
+<arg>idade=18</arg>
+<arg>cep_estado=CE</arg>
+<arg>txt_qtde=1</arg>
+<arg>cep_cidade=1638</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-12-08T16:21:36.879262" elapsed="0.001168"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-12-08T16:21:37.414339" level="INFO">POST Request : url=https://www.4devs.com.br/ferramentas_online.php 
+ path_url=/ferramentas_online.php 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '86'} 
+ body=acao=gerar_pessoa&amp;sexo=I&amp;pontuacao=N&amp;idade=18&amp;cep_estado=CE&amp;txt_qtde=1&amp;cep_cidade=1638 
+ </msg>
+<msg time="2025-12-08T16:21:37.414701" level="INFO">POST Response : url=https://www.4devs.com.br/ferramentas_online.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx', 'Date': 'Mon, 08 Dec 2025 19:21:37 GMT', 'Content-Type': 'application/json', 'Content-Length': '374', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=2592000', 'Content-Encoding': 'gzip', 'X-UA-Compatible': 'IE=edge', 'X-Content-Type-Options': 'nosniff', 'Vary': 'Accept-Encoding, User-Agent', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'X-Frame-Options': 'SAMEORIGIN'} 
+ body=[{"nome":"Laura Milena Carvalho","idade":18,"cpf":"41995167355","rg":"331938674","data_nasc":"19/10/2007","sexo":"Feminino","signo":"Libra","mae":"Andrea Cecília Adriana","pai":"Hugo Gustavo Carvalho","email":"laura_carvalho@ramiresmotors.com.br","senha":"Jr3uiNge4k","cep":"63515970","endereco":"Rua Pedro Gomes Araújo, s/n","numero":206,"bairro":"Centro","cidade":"Quixelô","estado":"CE","telefone_fixo":"8827216737","celular":"88984696012","altura":"1,66","peso":74,"tipo_sanguineo":"AB+","cor":"amarelo"}] 
+ </msg>
+<msg time="2025-12-08T16:21:37.415339" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>alias=4devs</arg>
+<arg>url=/ferramentas_online.php</arg>
+<arg>data=${form_data}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-12-08T16:21:36.880954" elapsed="0.534525"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-12-08T16:21:37.418895" level="INFO">${pessoa} = {'nome': 'Laura Milena Carvalho', 'idade': 18, 'cpf': '41995167355', 'rg': '331938674', 'data_nasc': '19/10/2007', 'sexo': 'Feminino', 'signo': 'Libra', 'mae': 'Andrea Cecília Adriana', 'pai': 'Hugo G...</msg>
+<var>${pessoa}</var>
+<arg>${response.json()[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.416172" elapsed="0.002881"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-12-08T16:21:37.422010" level="INFO">${rg_completo} = 331938674</msg>
+<var>${rg_completo}</var>
+<arg>${pessoa['rg']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.419698" elapsed="0.002449"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2025-12-08T16:21:37.423650" level="INFO">${rg_tratado} = 3319386</msg>
+<var>${rg_tratado}</var>
+<arg>${rg_completo}</arg>
+<arg>0</arg>
+<arg>7</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.422713" elapsed="0.001064"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-12-08T16:21:37.426527" level="INFO">${data_nascimento} = 19/10/2007</msg>
+<var>${data_nascimento}</var>
+<arg>${pessoa['data_nasc']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.424350" elapsed="0.002310"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2025-12-08T16:21:37.427939" level="INFO">${data_tratada} = 19102007</msg>
+<var>${data_tratada}</var>
+<arg>${data_nascimento}</arg>
+<arg>/</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.427193" elapsed="0.000871"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-12-08T16:21:37.446833" level="INFO">${cliente_dados} = {'nome': 'Laura Milena Carvalho', 'dataNascimento': '19102007', 'email': 'laura_carvalho@ramiresmotors.com.br', 'celular': '88984696012', 'cargo': 'QA', 'rg': '3319386', 'cpf': '41995167355', 'cep': '...</msg>
+<var>${cliente_dados}</var>
+<arg>nome=${pessoa['nome']}</arg>
+<arg>dataNascimento=${data_tratada}</arg>
+<arg>email=${pessoa['email']}</arg>
+<arg>celular=${pessoa['celular']}</arg>
+<arg>cargo=QA</arg>
+<arg>rg=${rg_tratado}</arg>
+<arg>cpf=${pessoa['cpf']}</arg>
+<arg>cep=${pessoa['cep']}</arg>
+<arg>pais=Brasil</arg>
+<arg>cidade=${pessoa['cidade']}</arg>
+<arg>estado=${pessoa['estado']}</arg>
+<arg>bairro=${pessoa['bairro']}</arg>
+<arg>endereco=${pessoa['endereco']}</arg>
+<arg>numero=${pessoa['numero']}</arg>
+<arg>complemento=Apartamento 01</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.428664" elapsed="0.018322"/>
+</kw>
+<return>
+<value>${cliente_dados}</value>
+<status status="PASS" start="2025-12-08T16:21:37.447384" elapsed="0.000254"/>
+</return>
+<msg time="2025-12-08T16:21:37.448379" level="INFO">${dados_cliente} = {'nome': 'Laura Milena Carvalho', 'dataNascimento': '19102007', 'email': 'laura_carvalho@ramiresmotors.com.br', 'celular': '88984696012', 'cargo': 'QA', 'rg': '3319386', 'cpf': '41995167355', 'cep': '...</msg>
+<var>${dados_cliente}</var>
+<doc>Gera dados de cliente aleatórios através da API 4devs</doc>
+<status status="PASS" start="2025-12-08T16:21:36.870206" elapsed="0.578312"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-12-08T16:21:37.450095" level="INFO">${dados_cliente} = {'nome': 'Laura Milena Carvalho', 'dataNascimento': '19102007', 'email': 'laura_carvalho@ramiresmotors.com.br', 'celular': '88984696012', 'cargo': 'QA', 'rg': '3319386', 'cpf': '41995167355', 'cep': '...</msg>
+<arg>${dados_cliente}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.449086" elapsed="0.001370"/>
+</kw>
+<kw name="Preencher Campo Nome Completo" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:fullName</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.454111" elapsed="0.044817"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:37.500225" level="INFO">Typing text 'Laura Milena Carvalho' into text field 'id:fullName'.</msg>
+<arg>id:fullName</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.499581" elapsed="0.157040"/>
+</kw>
+<arg>${dados_cliente['nome']}</arg>
+<status status="PASS" start="2025-12-08T16:21:37.451235" elapsed="0.205779"/>
+</kw>
+<kw name="Preencher Campo Data Nascimento" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:birthDate</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.659100" elapsed="0.031235"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:37.692299" level="INFO">Typing text '19102007' into text field 'id:birthDate'.</msg>
+<arg>id:birthDate</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.690915" elapsed="0.168300"/>
+</kw>
+<arg>${dados_cliente['dataNascimento']}</arg>
+<status status="PASS" start="2025-12-08T16:21:37.657745" elapsed="0.201607"/>
+</kw>
+<kw name="Preencher Campo Email Cliente" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:mail</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.860255" elapsed="0.034883"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:37.895784" level="INFO">Typing text 'laura_carvalho@ramiresmotors.com.br' into text field 'id:mail'.</msg>
+<arg>id:mail</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:37.895469" elapsed="0.358035"/>
+</kw>
+<arg>${dados_cliente['email']}</arg>
+<status status="PASS" start="2025-12-08T16:21:37.859546" elapsed="0.394076"/>
+</kw>
+<kw name="Preencher Campo Telefone" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:38.254571" elapsed="0.018673"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:38.273708" level="INFO">Typing text '88984696012' into text field 'id:phone'.</msg>
+<arg>id:phone</arg>
+<arg>${telefone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:38.273449" elapsed="0.106065"/>
+</kw>
+<arg>${dados_cliente['celular']}</arg>
+<status status="PASS" start="2025-12-08T16:21:38.253823" elapsed="0.125901"/>
+</kw>
+<kw name="Preencher Campo Cargo" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:currentRole</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:38.381105" elapsed="0.032720"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:38.415190" level="INFO">Typing text 'QA' into text field 'id:currentRole'.</msg>
+<arg>id:currentRole</arg>
+<arg>${cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:38.414614" elapsed="0.169529"/>
+</kw>
+<arg>${dados_cliente['cargo']}</arg>
+<status status="PASS" start="2025-12-08T16:21:38.380044" elapsed="0.204491"/>
+</kw>
+<kw name="Preencher Campo RG" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:rg</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:38.585978" elapsed="0.042972"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:38.629947" level="INFO">Typing text '3319386' into text field 'id:rg'.</msg>
+<arg>id:rg</arg>
+<arg>${rg}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:38.629550" elapsed="0.208949"/>
+</kw>
+<arg>${dados_cliente['rg']}</arg>
+<status status="PASS" start="2025-12-08T16:21:38.584859" elapsed="0.253796"/>
+</kw>
+<kw name="Preencher Campo CPF" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:cpf</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:38.839594" elapsed="0.030553"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:38.871111" level="INFO">Typing text '41995167355' into text field 'id:cpf'.</msg>
+<arg>id:cpf</arg>
+<arg>${cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:38.870592" elapsed="0.231127"/>
+</kw>
+<arg>${dados_cliente['cpf']}</arg>
+<status status="PASS" start="2025-12-08T16:21:38.838849" elapsed="0.263062"/>
+</kw>
+<kw name="Preencher Campo CEP" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:zipCode</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:39.103408" elapsed="0.051064"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:39.156100" level="INFO">Typing text '63515970' into text field 'id:zipCode'.</msg>
+<arg>id:zipCode</arg>
+<arg>${cep}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:39.154925" elapsed="0.155197"/>
+</kw>
+<arg>${dados_cliente['cep']}</arg>
+<status status="PASS" start="2025-12-08T16:21:39.102146" elapsed="0.208100"/>
+</kw>
+<kw name="Preencher Campo Pais" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:country</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:39.311714" elapsed="0.030348"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:39.343645" level="INFO">Typing text 'Brasil' into text field 'id:country'.</msg>
+<arg>id:country</arg>
+<arg>${pais}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:39.342669" elapsed="0.193747"/>
+</kw>
+<arg>${dados_cliente['pais']}</arg>
+<status status="PASS" start="2025-12-08T16:21:39.310461" elapsed="0.226134"/>
+</kw>
+<kw name="Preencher Campo Cidade" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:city</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:39.538556" elapsed="0.034486"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:39.573836" level="INFO">Typing text 'Quixelô' into text field 'id:city'.</msg>
+<arg>id:city</arg>
+<arg>${cidade}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:39.573302" elapsed="0.198498"/>
+</kw>
+<arg>${dados_cliente['cidade']}</arg>
+<status status="PASS" start="2025-12-08T16:21:39.536885" elapsed="0.235057"/>
+</kw>
+<kw name="Preencher Campo Estado" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:state</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:39.774107" elapsed="0.037391"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:39.812112" level="INFO">Typing text 'CE' into text field 'id:state'.</msg>
+<arg>id:state</arg>
+<arg>${estado}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:39.811774" elapsed="0.164354"/>
+</kw>
+<arg>${dados_cliente['estado']}</arg>
+<status status="PASS" start="2025-12-08T16:21:39.772176" elapsed="0.204207"/>
+</kw>
+<kw name="Preencher Campo Bairro" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:district</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:39.978601" elapsed="0.040358"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:40.020275" level="INFO">Typing text 'Centro' into text field 'id:district'.</msg>
+<arg>id:district</arg>
+<arg>${bairro}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:40.019623" elapsed="0.205460"/>
+</kw>
+<arg>${dados_cliente['bairro']}</arg>
+<status status="PASS" start="2025-12-08T16:21:39.976720" elapsed="0.248516"/>
+</kw>
+<kw name="Preencher Campo Rua" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:street</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:40.227351" elapsed="0.042013"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:40.270120" level="INFO">Typing text 'Rua Pedro Gomes Araújo, s/n' into text field 'id:street'.</msg>
+<arg>id:street</arg>
+<arg>${rua}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:40.269754" elapsed="0.223226"/>
+</kw>
+<arg>${dados_cliente['endereco']}</arg>
+<status status="PASS" start="2025-12-08T16:21:40.225513" elapsed="0.267667"/>
+</kw>
+<kw name="Preencher Campo Numero" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:number</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:40.494531" elapsed="0.027204"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:40.522878" level="INFO">Typing text '206' into text field 'id:number'.</msg>
+<arg>id:number</arg>
+<arg>${numero}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:40.522352" elapsed="0.172821"/>
+</kw>
+<arg>${dados_cliente['numero']}</arg>
+<status status="PASS" start="2025-12-08T16:21:40.493521" elapsed="0.201971"/>
+</kw>
+<kw name="Preencher Campo Complemento" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:complement</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:40.698029" elapsed="0.054467"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:40.754095" level="INFO">Typing text 'Apartamento 01' into text field 'id:complement'.</msg>
+<arg>id:complement</arg>
+<arg>${complemento}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:40.753122" elapsed="0.212534"/>
+</kw>
+<arg>${dados_cliente['complemento']}</arg>
+<status status="PASS" start="2025-12-08T16:21:40.696015" elapsed="0.269826"/>
+</kw>
+<status status="PASS" start="2025-12-08T16:21:36.867944" elapsed="4.098033"/>
+</kw>
+<status status="PASS" start="2025-12-08T16:21:36.867234" elapsed="4.098899"/>
+</kw>
+<kw name="E salvar o cadastro" owner="client">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[normalize-space()='Salvar']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T16:21:40.968091" elapsed="0.034346"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:41.003106" level="INFO">Clicking button '//button[normalize-space()='Salvar']'.</msg>
+<arg>//button[normalize-space()='Salvar']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T16:21:41.002805" elapsed="0.152678"/>
+</kw>
+<status status="PASS" start="2025-12-08T16:21:40.967098" elapsed="0.188596"/>
+</kw>
+<kw name="Então o cliente deve ser cadastrado com sucesso" owner="client">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-12-08T16:21:46.344350" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-12-08T16:21:46.344505" level="FAIL">Element 'xpath://h5[text()='Laura Milena Carvalho']' not visible after 5 seconds.</msg>
+<arg>xpath://h5[text()='${dados_cliente['nome']}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-12-08T16:21:41.157859" elapsed="5.187656">Element 'xpath://h5[text()='Laura Milena Carvalho']' not visible after 5 seconds.</status>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>xpath://h5[text()='${dados_cliente['nome']}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-12-08T16:21:46.345704" elapsed="0.000035"/>
+</kw>
+<status status="FAIL" start="2025-12-08T16:21:41.157431" elapsed="5.188422">Element 'xpath://h5[text()='Laura Milena Carvalho']' not visible after 5 seconds.</status>
+</kw>
+<kw name="Fechar Navegador" owner="common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-08T15:37:08.517621" elapsed="0.107030"/>
+<status status="PASS" start="2025-12-08T16:21:46.346423" elapsed="0.093720"/>
 </kw>
-<status status="PASS" start="2025-12-08T15:37:08.515948" elapsed="0.109037"/>
+<status status="PASS" start="2025-12-08T16:21:46.346144" elapsed="0.094255"/>
 </kw>
-<doc>Realizar login</doc>
-<status status="PASS" start="2025-12-08T15:37:00.972297" elapsed="7.652978"/>
+<doc>Realizar login, navega até Clientes e cadastra um novo cliente com sucesso</doc>
+<status status="FAIL" start="2025-12-08T16:21:29.555478" elapsed="16.885148">Element 'xpath://h5[text()='Laura Milena Carvalho']' not visible after 5 seconds.</status>
 </test>
-<status status="PASS" start="2025-12-08T15:37:00.788373" elapsed="7.838161"/>
+<status status="FAIL" start="2025-12-08T16:21:29.159267" elapsed="17.282145"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
+<stat name="Client" id="s1" pass="0" fail="1" skip="0">Client</stat>
 </suite>
 </statistics>
 <errors>

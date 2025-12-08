@@ -4,14 +4,6 @@ Resource    ../../configs/ui_variables.robot
 Resource    ../../configs/api_variables.robot
 
 *** Keywords ***
-Abrir Navegador
-    Open Browser    url=${BASE_URL_UI}/login    browser=${BROWSER}
-    Maximize Browser Window
-
-Fechar Navegador
-    Close Browser
-
-
 Dado que estou na página de login
     Wait Until Location Is    ${BASE_URL_UI}/login
     Location Should Be    ${BASE_URL_UI}/login
