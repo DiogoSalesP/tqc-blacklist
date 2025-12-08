@@ -1,0 +1,21 @@
+1765217780646	geckodriver	INFO	Listening on 127.0.0.1:41339
+1765217780699	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/usr/bin/firefox" "--m ... te" "--remote-debugging-port" "52139" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileCs6843"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1765217781323	Marionette	INFO	Marionette enabled
+1765217781473	Marionette	INFO	Listening on port 44047
+WebDriver BiDi listening on ws://127.0.0.1:52139
+Read port: 44047
+1765217781593	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: moz-src:///browser/components/search/SearchOneOffs.sys.mjs, line 385: TypeError: aEngine.getIconURL is not a function
+JavaScript error: moz-src:///browser/components/search/SearchOneOffs.sys.mjs, line 385: TypeError: aEngine.getIconURL is not a function
+JavaScript error: moz-src:///browser/components/search/SearchOneOffs.sys.mjs, line 385: TypeError: aEngine.getIconURL is not a function
+1765217855278	Marionette	INFO	Stopped listening on port 44047
+console.error: (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: (new Error("OHTTP was configured for https://ads.mozilla.org/v1/delete_user but we couldn't fetch a valid config", "moz-src:///browser/modules/ContextId.sys.mjs", 234))
+console.error: "Failed to fetch https://spocs.getpocket.com/user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/ObliviousHTTP.sys.mjs, line 105: NS_ERROR_XPC_CANT_CONVERT_PRIMITIVE_TO_ARRAY: Cannot convert primitive JavaScript value into an array arg 2 [nsIObliviousHttpService.newChannel]
+1765217855387	geckodriver::marionette	ERROR	Failed to close browser connection: unknown error
+[ERROR glean_core::database] Failed to record metric 'dirtybit' into glean_internal_info: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "Arquivo ou diretório inexistente" })) }
+[ERROR glean_core] Can't persist ping lifetime data: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "Arquivo ou diretório inexistente" })) }

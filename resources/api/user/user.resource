@@ -2,6 +2,7 @@
 Resource    ../login.resource
 Resource    ../base_api.resource
 Resource    ../generate_random_data.resource
+Resource    ../../../configs/api_variables.robot
 
 
 

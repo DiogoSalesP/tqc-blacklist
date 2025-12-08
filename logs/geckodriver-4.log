@@ -1,0 +1,24 @@
+1765218164637	geckodriver	INFO	Listening on 127.0.0.1:44271
+1765218164693	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/usr/bin/firefox" "--m ... te" "--remote-debugging-port" "32923" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHBaNR1"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1765218165562	Marionette	INFO	Marionette enabled
+1765218165732	Marionette	INFO	Listening on port 41727
+WebDriver BiDi listening on ws://127.0.0.1:32923
+Read port: 41727
+1765218165877	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: [Exception... "Favicon at "https://blacklist.qacoders.dev.br/favicon.ico" failed to load."  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "JS frame :: resource:///modules/FaviconLoader.sys.mjs :: onStopRequest :: line 225"  data: no]
+1765218175408	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1765218178835	Marionette	INFO	Stopped listening on port 41727
+console.error: "Failed to fetch https://spocs.getpocket.com/user:" "NetworkError when attempting to fetch resource."
+console.error: (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: (new Error("OHTTP was configured for https://ads.mozilla.org/v1/delete_user but we couldn't fetch a valid config", "moz-src:///browser/modules/ContextId.sys.mjs", 234))
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/ObliviousHTTP.sys.mjs, line 105: NS_ERROR_XPC_CANT_CONVERT_PRIMITIVE_TO_ARRAY: Cannot convert primitive JavaScript value into an array arg 2 [nsIObliviousHttpService.newChannel]
+1765218178936	geckodriver::marionette	ERROR	Failed to close browser connection: unknown error
+[ERROR glean_core::database] Failed to record metric 'usage.profile_id' into usage-deletion-request: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "Arquivo ou diretório inexistente" })) }
+[ERROR glean_core::database] Failed to record metric 'usage.profile_id' into usage-reporting: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "Arquivo ou diretório inexistente" })) }
+[ERROR glean_core::database] Failed to record metric 'usage.profile_group_id' into usage-deletion-request: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "Arquivo ou diretório inexistente" })) }
+[ERROR glean_core::database] Failed to record metric 'usage.profile_group_id' into usage-reporting: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "Arquivo ou diretório inexistente" })) }
+[ERROR glean_core::database] Failed to record metric 'dirtybit' into glean_internal_info: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "Arquivo ou diretório inexistente" })) }
+[ERROR glean_core] Can't persist ping lifetime data: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "Arquivo ou diretório inexistente" })) }

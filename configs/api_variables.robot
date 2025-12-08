@@ -1,6 +1,6 @@
 *** Variables ***
 ${SESSION_ALIAS}    develop
-${BASE_URL}    https://api-blacklist.qacoders.dev.br/api
+${BASE_URL_API}    https://api-blacklist.qacoders.dev.br/api
 ${USER_MAIL}    blacklist_robot@qa.com
 ${USER_PASSWORD}    p4Hg83@%sqRw
 ${APPLICATION}    application/json

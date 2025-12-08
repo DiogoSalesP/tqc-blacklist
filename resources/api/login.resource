@@ -1,10 +1,10 @@
 *** Settings ***
 Resource    base_api.resource
-Resource    ../../configs/dev_variables.robot
+Resource    ../../configs/api_variables.robot
 *** Keywords ***
 Criar Sessao
     ${headers}    Create Dictionary    accpet=${APPLICATION}    Content-Type=${APPLICATION}
-    Create Session    alias=${SESSION_ALIAS}    url=${BASE_URL}    headers=${headers}
+    Create Session    alias=${SESSION_ALIAS}    url=${BASE_URL_API}    headers=${headers}
 
 Realizar Login
     [Arguments]    ${mail}     ${password}    ${status_code}
