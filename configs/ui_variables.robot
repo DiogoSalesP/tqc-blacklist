@@ -7,3 +7,9 @@ ${ID_PASSWORD}    id:password
 ${ID_LOGIN}    id:login
 ${ID_CADASTRO}    id:Cadastros
 ${ID_CLIENTES}    id:Clientes
+${ID_CONST_CENTE}    id:Centro de Custo
+${ID_CONST_CENTERNAME}    id:costCentername
+
+
+
+${INPUT_COST_CENTER}    QA Blacklist 1649
