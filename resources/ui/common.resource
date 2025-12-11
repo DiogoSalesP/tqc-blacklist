@@ -6,8 +6,20 @@ Resource    generate_random_data.resource
 
 *** Keywords ***
 Abrir Navegador
-    Open Browser    url=${BASE_URL_UI}/login    browser=${BROWSER}
+    ${headless}=    Get Environment Variable    CI    default=False
+    Run Keyword If    '${headless}' == 'true'    Abrir Navegador Headless
+    ...  ELSE    Abrir Navegador Interface
+
+Abrir Navegador Interface
+    Open Browser    ${BASE_URL_UI}    Chrome
     Maximize Browser Window
+
+Abrir Navegador Headless
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChormeOptions()    sys, selenium.wedriver
+    Call Method    ${options}    add_argument    headless
+    Call Method    ${options}    add_argument    no-sanbox
+    Call Method    ${options}    add_argument    disable-dev-shm-usage
+    Open Browser    ${BASE_URL_UI}    chrome    options=${options}
 
 Fechar Navegador
     Close Browser
